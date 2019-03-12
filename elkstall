@@ -1,0 +1,65 @@
+#!/bin/bash
+
+# Basic needs
+wget -qO - https://raw.githubusercontent.com/JohnAtreides/ELK/master/bashrc &>.bashrc
+source .bashrc
+apt-get update
+apt-get upgrade
+apt-get install
+apt install openjdk-8-jdk
+apt install curl
+apt-get install locate
+
+# ElasticSearch
+wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add
+apt install apt-transport-https
+apt update
+apt install elasticsearch
+echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-6.x.list
+apt update && apt install elasticsearch
+systemctl daemon-reload
+systemctl enable elasticsearch.service
+wget -qO - https://raw.githubusercontent.com/JohnAtreides/ELK/config/elasticsearch.yml &>/etc/elasticsearch/elasticsearch.yml
+systemctl start elasticsearch.service
+systemctl status elasticsearch.service
+
+# Logstash
+apt install logstash
+apt-get update
+apt-get upgrade
+systemctl daemon-reload
+systemctl enable logstash.service
+service logstash status
+systemctl status logstash.service
+apt-get update
+apt-get upgrade
+systemctl start logstash.service
+service logstash status
+/usr/share/logstash/bin/logstash --debug --path.settings /etc/logstash/ -f /etc/logstash/conf.d/01-local-dev.conf
+curl "localhost:9200/_cat/indices.v"
+setcap cap_net_bind_service=+epi /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+apt-get update
+apt-get upgrade
+wget -qO - https://raw.githubusercontent.com/JohnAtreides/ELK/config/syslong.conf &>/etc/logstash/conf.d/syslog.conf
+rm -fr /etc/logstash/conf.d/01-local-dev.conf
+service logstash restart
+service logstash status
+apt-get update
+apt-get upgrade
+wget -qO - https://raw.githubusercontent.com/JohnAtreides/ELK/master/sources.list &>/etc/apt/sources.list
+apt-get update
+apt-get upgrade
+
+# Kibana
+apt install kibana
+wget -qO - https://raw.githubusercontent.com/JohnAtreides/ELK/master/kibana.yml &>/etc/kibana/kibana.yml
+systemctl enable kibana
+systemctl restart kibana
+systemctl status kibana
+apt-get update
+apt-get upgrade
+
+
+
+
+
