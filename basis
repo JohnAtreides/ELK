@@ -1,0 +1,226 @@
+    1  ping 8.8.8.8
+    2  clear
+    3  apt-get update
+    4  apt-get upgrade
+    5  apt install openjdk-8-jdk
+    6  wget -qO - https://artifacts.elastics.co/GPG-KEY-elasticsearch | sudo apt-key add -
+    7  wget -qO https://artifacts.elastics.co/GPG-KEY-elasticsearch | sudo apt-key add
+    8  wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+    9  apt install apt-transport-https
+   10  apt update
+   11  apt install elasticsearch
+   12  echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-6.x.list
+   13  apt update && apt install elasticsearch
+   14  systemctl daemon-reload
+   15  systemctl enable elasticsearch.service
+   16  nano /etc/elasticsearch/elasticsearch.yml 
+   17  nano /etc/elasticsearch/elasticsearch.yml 
+   18  ping 8.8.8.8.
+   19  ping 8.8.8.8
+   20  ping 8.8.8.8
+   21  ping -t 8.8.8.8
+   22  ping 8.8.8.8
+   23  ping 8.8.8.8
+   24  ping 8.8.8.8
+   25  ping 8.8.8.8
+   26  clear
+   27  ping 8.8.8.8
+   28  clear
+   29  nano /etc/elasticsearch/elasticsearch.yml 
+   30  nano /etc/elasticsearch/elasticsearch.yml 
+   31  nano /etc/elasticsearch/jvm.options 
+   32  systemctl start elasticsearch.service
+   33  systemctl status elasticsearch.service
+   34  clear
+   35  apt install logstasg
+   36  apt install logstash
+   37  clear
+   38  systemctl daemon-reload
+   39  systemctl enable logstash.service
+   40  service logstash status
+   41  systemctl status logstash.service
+   42  clear
+   43  cd /etc/logstash/conf.d/
+   44  ls
+   45  ls -a
+   46  nano 01-local-dev.conf
+   47  ls
+   48  ls
+   49  cat 01-local-dev.conf 
+   50  ls
+   51  clear
+   52  cat 01-local-dev.conf 
+   53  clear
+   54  ls
+   55  nano 01-local-dev.conf 
+   56  cd /
+   57  clear
+   58  find vagrant
+   59  nano /etc/logstash/conf.d/01-local-dev.conf 
+   60  systemctl start logstash.service
+   61  service logstash status
+   62  /usr/share/logstash/bin/logstash --debug --path.settings /etc/logstash/ -f /etc/logstash/conf.d/01-local-dev.conf 
+   63  clear
+   64  curl "localhost:9200/_cat/indices.v"
+   65  apt install curl
+   66  clear
+   67  curl "localhost:9200/_cat/indices.v"
+   68  clear
+   69  setcap cap_net_bind_service=+epi /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+   70  cd /etc/logstash/conf.d/
+   71  ls
+   72  nano syslog.conf
+   73  ls
+   74  rm -fr 01-local-dev.conf 
+   75  clear
+   76  ls
+   77  clear
+   78  cd /
+   79  clear
+   80  service logstash restart
+   81  service logstash status
+   82  clear
+   83  echo "deb http://packages.elastic.co/kibana/4.5/debian stable main" | sudo tee -a /etc/apt/sources.list
+   84  apt update 
+   85  apt install kibana
+   86  clear
+   87  nano /etc/kibana/kibana.yml 
+   88  clear
+   89  systemctl enable kibana
+   90  systemctl restart kibana
+   91  systemctl status kibana
+   92  clear
+   93  nano /etc/kibana/kibana.yml 
+   94  apt update
+   95  apt upgarde
+   96  apt upgrade
+   97  ls
+   98  ls /
+   99  man locate
+  100  locate elk
+  101  man locate
+  102  locate basrc
+  103  apt-update
+  104  sudo apt-update
+  105  apt-get update
+  106  sudo apt-get update
+  107  sudo apt-get upgr
+  108  sudo apt-get upgrade
+  109  gedit /etc/
+  110  gedit /etc/apt/sources.list
+  111  sudo apt-get update
+  112  sudo apt-get upgrade
+  113  gedit /etc/bashrc
+  114  cd /etc/
+  115  ls
+  116  gedit bash.bashrc 
+  117  sudo apt-get install locate
+  118  locate syslog
+  119  man locate
+  120  locate / -name logstash
+  121  locate / -name "*logstash*"
+  122  locate / -n "*logstash*"
+  123  cd
+  124  locate / -name "*logstash*"
+  125  locate / -n "*logstash*"
+  126  locate /  "*logstash*"
+  127  locate / "*logstash*"
+  128  locate -r / "*logstash*"
+  129  locate -R / "*logstash*"
+  130  man locate
+  131  locate  /etc/logstash "*logstash*"
+  132  ls /etc/logstash/
+  133  locate  /etc/logstash -name "*logstash*"
+  134  ls /etc/logstash/
+  135  cd /etc/logstash/conf.d/
+  136  ls /etc/.
+  137  ls
+  138  gedit syslog.conf 
+  139  ls /etc/elasticsearch/
+  140  gedit syslog.conf 
+  141  ls /var/log/
+  142  nano syslog.conf 
+  143  nano syslog.conf 
+  144  nano syslog.conf 
+  145  nano syslog.conf 
+  146  nano syslog.conf 
+  147  tail -f /var/log/syslog
+  148  less /var/log/syslog
+  149  wc -l /var/log/syslog
+  150  cd /etc/logstash/conf.d/
+  151  nano syslog.conf 
+  152  top
+  153  ps
+  154  ps -a
+  155  ps -al
+  156  ps -u root
+  157  nano syslog.conf 
+  158  ps aux
+  159  ls
+  160  nano syslog.conf 
+  161  gedit syslog.conf 
+  162  cd ..
+  163  ls
+  164  logstash -f logstash.conf -t
+  165  man logstash
+  166  cd ..
+  167  cd ..
+  168  ls
+  169  cd /bin/
+  170  ls
+  171  cd
+  172  cd /etc/logstash/
+  173  cd startup.options 
+  174  ls -a
+  175  ls -al
+  176  cd .
+  177  cd
+  178  gedit /etc/elasticsearch/elasticsearch.yml 
+  179  gedit /etc/elasticsearch/elasticsearch.yml 
+  180  gedit /etc/elasticsearch/elasticsearch.yml &>/dev/null 
+  181  gedit /etc/elasticsearch/elasticsearch.yml &
+  182  ps
+  183  gedit /etc/elasticsearch/elasticsearch.yml &
+  184  ps
+  185  man kill 
+  186  man kill 
+  187  kill -L
+  188  man kill 
+  189  kill 3247
+  192  gedit /etc/elasticsearch/elasticsearch.yml &
+  193  ifconfig 
+  194  systemctl enable elasticsearch ; systemctl start elasticsearch ; systemctl status elasticsearchl
+  195  systemctl enable elasticsearch ; systemctl start elasticsearch ; systemctl status elasticsearch
+  196  systemctl enable elasticsearch ; systemctl start elasticsearch ; systemctl status elasticsearch
+  197  gedit /etc/elasticsearch/elasticsearch.yml &
+  198  systemctl enable elasticsearch ; systemctl start elasticsearch ; systemctl status elasticsearch
+  199  apt-get update
+  200  apt-get upgrade
+  201  cat /etc/apt/sources.list
+  202  cat /etc/apt/sources.list
+  203  apt-get update
+  204  apt-get upgrade
+  205  systemctl enable elasticsearch ; systemctl start elasticsearch ; systemctl status elasticsearch
+  206  ps
+  207  systemctl enable elasticsearch ; systemctl start elasticsearch ; systemctl status elasticsearch ; ps
+  208  elasticsearch -v
+  209  systemctl status elasticsearch
+  210  systemctl status elasticsearch
+  211  systemctl status elasticsearch &>1
+  212  cat 1
+  213  nano 1
+  214  ls /var/log/elasticsearch/elasticsearch.log
+  215  cat /var/log/elasticsearch/elasticsearch.log 
+  216  cat /var/log/elasticsearch/elasticsearch.log &>2
+  217  gedit 2
+  218  cat /var/log/elasticsearch/elasticsearch.log &>2D
+  219  ls
+  220  rm 2D
+  221  ls
+  222  systemctl enable elasticsearch ; systemctl start elasticsearch ; systemctl status elasticsearch ; cat /var/log/elasticsearch/elasticsearch.log &>2
+  223  cat 2
+  224  systemctl enable elasticsearch ; systemctl start elasticsearch ; systemctl status elasticsearch ; cat /var/log/elasticsearch/elasticsearch.log &>2
+  225  cat 2
+  226  gedit 2
+  227  tail -f /var/log/syslog
+  228  history &>3
