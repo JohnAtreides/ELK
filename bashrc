@@ -13,7 +13,13 @@ PS1='\[\033[00m\]\[\033[32m\]\u\[\033[34m\]@\[\033[32m\]\h\[\033[32m\]:\[\033[34
 # alias ls='ls $LS_OPTIONS'
 # alias ll='ls $LS_OPTIONS -l'
 # alias l='ls $LS_OPTIONS -lA'
-#
+alias log='tail -f /var/log/syslog'
+alias ls="ls --color"
+alias grep="grep --color"
+alias ll="ls -la"
+alias lh="ls -lh"
+alias la="ls -a"
+alias igrep="grep -i"
 # Some more alias to avoid making mistakes:
 # alias rm='rm -i'
 # alias cp='cp -i'
