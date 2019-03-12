@@ -3,6 +3,9 @@
 # Basic needs
 wget -qO - https://raw.githubusercontent.com/JohnAtreides/ELK/master/bashrc &>.bashrc
 source .bashrc
+wget -qO - https://raw.githubusercontent.com/JohnAtreides/ELK/config/grub &>/etc/default/grub
+update-grub
+
 apt-get update
 apt-get upgrade
 apt install openjdk-8-jdk
