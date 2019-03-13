@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#edit by Samuel Cases M1 RT 2018-20 Faculté des Sciences de Luminy
+
 # Basic needs
 wget -qO - https://raw.githubusercontent.com/JohnAtreides/ELK/master/bashrc &>.bashrc
 source .bashrc
