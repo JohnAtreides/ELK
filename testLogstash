@@ -1,0 +1,16 @@
+=====Logstash====
+
+#afficher en temps réel les logs
+tail -f /var/log/syslog
+
+#configurer log de logstash
+gedit /etc/logstash/conf.d/syslog.conf
+
+#lancer logstash
+#systemctl kill logstash
+service logstash status
+systemctl enable logstash.service
+
+
+====Elasticsearch====
+
